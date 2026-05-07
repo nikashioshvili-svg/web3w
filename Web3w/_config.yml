@@ -1,0 +1,10 @@
+title: Web3 Warsaw 2026
+description: The Largest Web3 Conference in Eastern Europe 2026
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

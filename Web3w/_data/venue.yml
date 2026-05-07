@@ -1,0 +1,13 @@
+venue:
+- number: '01'
+  icon: ✈️
+  title: Transport
+  text: Warsaw is one of Europe's best-connected cities — two international airports, multiple rail hubs, and a modern metro system. Getting here from anywhere in the world is seamless.
+- number: '02'
+  icon: 🏛️
+  title: Venue
+  text: Our central Warsaw venue spans 8,000m² with large exhibition halls, breakout rooms, and the latest AV technology — built for conferences that demand excellence.
+- number: '03'
+  icon: 🏨
+  title: Hotels & Restaurants
+  text: Dozens of hotels at every price point and an incredible Warsaw dining scene surround the venue — making side events, dinners, and afterparties effortless to plan.

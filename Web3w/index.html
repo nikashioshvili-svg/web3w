@@ -1,0 +1,124 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ site.data.site.seo.title }}</title>
+<meta name="description" content="{{ site.data.site.seo.description | escape }}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="{{ site.data.site.nav.logo_image }}" alt="{{ site.data.site.nav.logo_alt | escape }}" style="height:36px;width:auto;display:block;" />
+  </a>
+  <ul class="nav-links">
+    {% for item in site.data.site.nav.links %}
+    <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{{ site.data.site.nav.cta_url }}" class="nav-cta">{{ site.data.site.nav.cta_text }}</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas class="hero-network-canvas" aria-hidden="true"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div style="position:relative;z-index:2;width:100%;max-width:900px;">
+    <div class="hero-badge">{{ site.data.site.hero.badge }}</div>
+    <div class="hero-countdown" aria-label="Countdown to Web3 Warsaw 2026" data-event-date="{{ site.data.site.hero.event_date_iso }}">
+      <div class="countdown-unit"><span class="countdown-number" id="count-days">126</span><span class="countdown-label">Days</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="count-hours">13</span><span class="countdown-label">Hours</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="count-minutes">00</span><span class="countdown-label">Minutes</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="count-seconds">00</span><span class="countdown-label">Seconds</span></div>
+    </div>
+    <h1 class="hero-title">{{ site.data.site.hero.title_line_1 }}<br/><span class="line2">{{ site.data.site.hero.title_line_2 }}</span></h1>
+    <p class="hero-subtitle">{{ site.data.site.hero.subtitle_before }} <span class="rotating-word" id="rotating-word">{{ site.data.site.hero.rotating_words | first }}</span> {{ site.data.site.hero.subtitle_after }}</p>
+    <p class="hero-date">{{ site.data.site.hero.date_location }}</p>
+    <div class="hero-btns"><a href="{{ site.data.site.hero.primary_button_url }}" class="btn-primary">{{ site.data.site.hero.primary_button_text }}</a><a href="{{ site.data.site.hero.secondary_button_url }}" class="btn-secondary">{{ site.data.site.hero.secondary_button_text }}</a></div>
+    <div class="hero-stats">
+      {% for stat in site.data.site.hero.stats %}
+      <div class="stat"><div class="stat-num">{{ stat.number_html }}</div><div class="stat-label">{{ stat.label }}</div></div>{% unless forloop.last %}<div class="stat-divider"></div>{% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap"><div class="ticker">
+  {% for i in (1..2) %}{% for item in site.data.site.ticker.items %}<div class="ticker-item"><span>✦</span> {{ item }}</div>{% endfor %}{% endfor %}
+</div></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner about-inner-tight"><div class="about-refined reveal"><div class="about-copy-col">
+    <div class="about-kicker-row">{{ site.data.site.about.kicker }}</div>
+    <h2 class="about-title-main">{{ site.data.site.about.title_html }}</h2>
+    <p class="about-short-copy">{{ site.data.site.about.description }}</p>
+    <div class="about-mini-grid">{% for card in site.data.site.about.cards %}<div class="about-mini-card" data-num="{{ card.number }}"><div class="about-mini-title">{{ card.title }}</div><div class="about-mini-text">{{ card.text }}</div></div>{% endfor %}</div>
+  </div><div class="about-visual-col reveal"><div class="about-feature-card compact-poster" aria-label="Welcome to Warsaw event visual"><div class="feature-logo">{{ site.data.site.about.poster_logo_html }}</div><div class="feature-title">{{ site.data.site.about.poster_title_html }}</div><div class="feature-meta"><span>{{ site.data.site.about.poster_meta_left }}</span><span>{{ site.data.site.about.poster_meta_right }}</span></div></div></div></div></div>
+</section>
+
+<!-- TICKETS -->
+<section id="tickets"><div class="section-inner"><div class="tickets-head reveal"><div><p class="section-label">{{ site.data.site.tickets_section.label }}</p><h2 class="section-title">{{ site.data.site.tickets_section.title_html }}</h2></div><p class="section-desc">{{ site.data.site.tickets_section.description }}</p></div>
+  <div class="tickets-grid reveal">
+    {% for ticket in site.data.tickets.tickets %}
+    <article class="ticket-card{% if ticket.featured %} featured{% endif %}">
+      <div class="ticket-tag">{{ ticket.tag }}</div>
+      <div class="ticket-img-wrap">{% if ticket.image %}<img src="{{ ticket.image }}" alt="{{ ticket.name | escape }}" />{% else %}<div class="vip-ticket-mock"></div>{% endif %}</div>
+      <div class="ticket-name">{{ ticket.name }}</div>
+      <div class="ticket-price"><span class="currency">{{ ticket.currency }}</span><span class="amount">{{ ticket.amount }}</span></div>
+      <div class="ticket-vat">{{ ticket.vat }}</div>
+      <ul class="ticket-features">{% for feature in ticket.features %}<li>{{ feature }}</li>{% endfor %}</ul>
+      <a href="{{ ticket.button_url }}" class="btn-primary">{{ ticket.button_text }}</a>
+    </article>
+    {% endfor %}
+  </div>{% if site.data.site.tickets_section.note %}<p class="ticket-note">{{ site.data.site.tickets_section.note }}</p>{% endif %}</div></section>
+
+<!-- AGENDA -->
+{% if site.data.site.agenda_section.enabled %}
+<section id="agenda"><div class="section-inner"><div class="reveal"><p class="section-label">{{ site.data.site.agenda_section.label }}</p><h2 class="section-title">{{ site.data.site.agenda_section.title_html }}</h2><p class="section-desc">{{ site.data.site.agenda_section.description }}</p></div><div class="venue-grid reveal">{% for item in site.data.agenda.agenda %}<div class="venue-card"><div class="venue-card-num">{{ item.time }}</div><span class="venue-card-icon">{{ item.day }}</span><div class="venue-card-title">{{ item.title }}</div><div class="venue-card-text">{% if item.speaker %}<strong style="color:#fff;">{{ item.speaker }}</strong><br/>{% endif %}{% if item.location %}{{ item.location }}<br/>{% endif %}{{ item.description }}</div></div>{% endfor %}</div></div></section>
+{% endif %}
+
+<!-- SPEAKERS -->
+<section id="speakers"><div class="section-inner"><div class="speakers-header reveal"><div><p class="section-label">{{ site.data.site.speakers_section.label }}</p><h2 class="section-title">{{ site.data.site.speakers_section.title_html }}</h2></div><div><a href="{{ site.data.site.speakers_section.all_speakers_url }}" class="btn-secondary">{{ site.data.site.speakers_section.all_speakers_text }}</a></div></div>
+  <div class="speakers-grid reveal">{% for speaker in site.data.speakers.speakers %}<div class="speaker-card">{% if speaker.photo %}<img src="{{ speaker.photo }}" alt="{{ speaker.name | escape }}" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>{% endif %}<div class="speaker-img-placeholder" style="display:none;">{{ speaker.initials }}</div><div class="speaker-info"><div class="speaker-name">{{ speaker.name }}</div><div class="speaker-role">{{ speaker.role }}</div><div class="speaker-social">{% for social in speaker.socials %}<a href="{{ social.url }}" class="social-dot" target="_blank" rel="noopener">{{ social.label }}</a>{% endfor %}</div></div></div>{% endfor %}</div>
+  <div class="speakers-cta reveal"><a href="{{ site.data.site.speakers_section.apply_url }}" class="btn-primary" target="_blank" rel="noopener">{{ site.data.site.speakers_section.apply_text }}</a><a href="{{ site.data.site.speakers_section.bottom_all_url }}" class="btn-secondary">{{ site.data.site.speakers_section.bottom_all_text }}</a></div></div></section>
+
+<!-- SPONSORS -->
+<section id="sponsors"><div class="section-inner"><div class="sponsors-intro reveal"><div><p class="section-label">{{ site.data.site.sponsors_section.label }}</p><h2 class="section-title">{{ site.data.site.sponsors_section.title_html }}</h2><p class="section-desc" style="margin-bottom:2rem;">{{ site.data.site.sponsors_section.description }}</p><a href="{{ site.data.site.sponsors_section.button_url }}" class="btn-primary" target="_blank" rel="noopener" style="display:inline-block;">{{ site.data.site.sponsors_section.button_text }}</a></div><div class="sponsor-tiers"><div style="margin-bottom:1rem;font-family:'Orbitron',monospace;font-size:0.7rem;letter-spacing:3px;color:var(--muted);text-transform:uppercase;">{{ site.data.site.sponsors_section.tiers_title }}</div>{% for tier in site.data.site.sponsors_section.tiers %}<div class="tier-badge"><div class="tier-dot" style="{{ tier.color_style }}"></div><div class="tier-label"><strong style="color:#fff;">{{ tier.name }}</strong> — {{ tier.description }}</div></div>{% endfor %}<div style="margin-top:1.5rem;font-size:0.85rem;color:var(--muted);">{{ site.data.site.sponsors_section.tiers_note }}</div></div></div>
+  <div class="sponsors-grid reveal">{% for sponsor in site.data.sponsors.sponsors %}<a class="sponsor-item" href="{{ sponsor.url | default: '#' }}" {% if sponsor.url and sponsor.url != '#' %}target="_blank" rel="noopener"{% endif %}>{% if sponsor.logo %}<img src="{{ sponsor.logo }}" alt="{{ sponsor.name | escape }}" />{% else %}<span class="sponsor-placeholder">{{ sponsor.name }}</span>{% endif %}</a>{% endfor %}</div></div></section>
+
+<!-- VENUE -->
+<section id="venue"><div class="section-inner"><div class="reveal"><p class="section-label">{{ site.data.site.venue_section.label }}</p><h2 class="section-title">{{ site.data.site.venue_section.title_html }}</h2><p class="section-desc">{{ site.data.site.venue_section.description }}</p></div><div class="venue-grid reveal">{% for card in site.data.venue.venue %}<div class="venue-card"><div class="venue-card-num">{{ card.number }}</div><span class="venue-card-icon">{{ card.icon }}</span><div class="venue-card-title">{{ card.title }}</div><div class="venue-card-text">{{ card.text }}</div></div>{% endfor %}</div></div></section>
+
+<!-- CTA -->
+<section id="cta" style="position:relative;overflow:hidden;"><div class="cta-glow"></div><div class="cta-inner reveal"><p class="section-label" style="text-align:center;">{{ site.data.site.cta.label }}</p><h2 class="cta-title">{{ site.data.site.cta.title_html }}</h2><p class="cta-sub">{{ site.data.site.cta.subtitle }}</p><div class="cta-btns"><a href="{{ site.data.site.cta.primary_button_url }}" class="btn-primary" target="_blank" rel="noopener">{{ site.data.site.cta.primary_button_text }}</a><a href="{{ site.data.site.cta.secondary_button_url }}" class="btn-secondary" target="_blank" rel="noopener">{{ site.data.site.cta.secondary_button_text }}</a></div></div></section>
+
+<!-- FOOTER -->
+<footer><div class="footer-grid"><div><div class="footer-logo">{{ site.data.site.footer.logo_html }}</div><div class="footer-desc">{{ site.data.site.footer.description }}</div><div class="footer-socials">{% for social in site.data.site.footer.socials %}<a href="{{ social.url }}" class="footer-social" target="_blank" rel="noopener">{{ social.label }}</a>{% endfor %}</div></div>{% for col in site.data.site.footer.columns %}<div><div class="footer-col-title">{{ col.title }}</div><ul class="footer-links">{% for link in col.links %}<li><a href="{{ link.url }}" {% if link.new_tab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>{% endfor %}</ul>{% if forloop.last %}<div style="margin-top:1.5rem;padding:1rem;background:var(--glass);border:1px solid var(--glass-border);"><div style="font-family:'Orbitron',monospace;font-size:0.75rem;letter-spacing:2px;color:var(--cyan);margin-bottom:0.3rem;">{{ site.data.site.footer.event_date }}</div><div style="font-size:0.85rem;color:var(--muted);">{{ site.data.site.footer.event_location }}</div></div>{% endif %}</div>{% endfor %}</div><div class="footer-bottom"><div>{{ site.data.site.footer.copyright }}</div><div class="footer-bottom-brand">{{ site.data.site.footer.brand }}</div></div></footer>
+
+<script>
+  window.WEB3_WARSAW_ROTATING_WORDS = {{ site.data.site.hero.rotating_words | jsonify }};
+</script>
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; });
+      }
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+speakers:
+- name: Matthias Mende
+  role: Founder & CEO, Bonuz
+  photo: https://web3warsaw.com/wp-content/uploads/2026/04/speakers-1.png
+  initials: MM
+  socials:
+  - label: 𝕏
+    url: https://x.com/MendeMatthias_s
+  - label: in
+    url: https://ae.linkedin.com/in/mendematthias
+- name: Guilherme J.
+  role: CEO, YAY
+  photo: https://web3warsaw.com/wp-content/uploads/2025/02/159.png
+  initials: GJ
+  socials:
+  - label: in
+    url: https://www.linkedin.com/in/guilherme-jovanovi%C4%87/
+- name: Joël Valenzuela
+  role: BD & Marketing Lead
+  photo: https://web3warsaw.com/wp-content/uploads/2024/09/13.png
+  initials: JV
+  socials:
+  - label: 𝕏
+    url: https://twitter.com/thedesertlynx
+  - label: in
+    url: https://www.linkedin.com/in/jo%C3%ABl-valenzuela-9b912ba/
+- name: Crimsonclad
+  role: Operations Lead
+  photo: https://web3warsaw.com/wp-content/uploads/2023/04/hive.png
+  initials: CR
+  socials:
+  - label: 𝕏
+    url: https://twitter.com/crimsonclad

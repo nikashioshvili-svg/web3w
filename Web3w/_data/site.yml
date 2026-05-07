@@ -1,0 +1,189 @@
+seo:
+  title: Web3 Warsaw 2026 — The Largest Web3 Conference in Eastern Europe
+  description: The Largest Web3 Conference in Eastern Europe 2026
+nav:
+  logo_image: https://web3warsaw.com/wp-content/uploads/2026/02/LOGO-WHITE.png
+  logo_alt: Web3 Warsaw
+  links:
+  - label: Home
+    url: '#hero'
+  - label: Sponsors
+    url: '#sponsors'
+  - label: Speakers
+    url: '#speakers'
+  - label: Media
+    url: '#media'
+  - label: Community
+    url: '#community'
+  - label: Side Events
+    url: '#side-events'
+  - label: Contact Us
+    url: '#contact'
+  cta_text: Get Tickets
+  cta_url: '#tickets'
+hero:
+  badge: Eastern Europe's Largest Web3 Event
+  title_line_1: WEB3
+  title_line_2: WARSAW 2026
+  subtitle_before: The Largest
+  rotating_words:
+  - Tech
+  - Web3
+  - Crypto
+  - AI
+  - Blockchain
+  subtitle_after: Conference in Eastern Europe 2026
+  date_location: September 9–10, 2026  ·  Warsaw, Poland
+  event_date_iso: '2026-09-09T09:00:00+02:00'
+  primary_button_text: Get Your Ticket
+  primary_button_url: '#tickets'
+  secondary_button_text: View Speakers
+  secondary_button_url: '#speakers'
+  stats:
+  - number_html: 2<span>K+</span>
+    label: Attendees
+  - number_html: 50<span>+</span>
+    label: Speakers
+  - number_html: 20<span>+</span>
+    label: Sponsors
+  - number_html: '2'
+    label: Days
+ticker:
+  items:
+  - WEB3 WARSAW 2026
+  - SEPTEMBER 9–10
+  - WARSAW, POLAND
+  - DECENTRALIZE EVERYTHING
+  - BUILD THE FUTURE
+  - 'EASTERN EUROPE''S #1'
+about:
+  kicker: About The Event
+  title_html: Inclusivity,<br/>Networking <span>&</span> Onboarding
+  description: Web3 Warsaw is a community-first conference built for people entering, building, funding, and scaling the Web3 ecosystem.
+  cards:
+  - number: '01'
+    title: Inclusivity
+    text: Open access for builders, creators, investors, students, and newcomers.
+  - number: '02'
+    title: Networking
+    text: Connect with protocols, exchanges, funds, media, and ecosystem leaders.
+  - number: '03'
+    title: Onboarding
+    text: Practical entry into blockchain, AI, NFTs, gaming, DeFi, and Web3 infrastructure.
+  poster_logo_html: Web 3<br/>Warsaw
+  poster_title_html: Welcome<br/>To Warsaw
+  poster_meta_left: September 9–10, 2026
+  poster_meta_right: Warsaw, Poland
+tickets_section:
+  label: Tickets
+  title_html: Choose Your<br/>Access Level
+  description: From general access to whale-level networking, pick the pass that fits how you want to experience Web3 Warsaw 2026.
+  note: All ticket prices are shown with VAT. Availability and access details can be adjusted when final ticketing is confirmed.
+speakers_section:
+  label: Who's Speaking
+  title_html: Voices Shaping<br/>Decentralization
+  all_speakers_text: All Speakers →
+  all_speakers_url: '#'
+  apply_text: Apply as Speaker
+  apply_url: https://forms.gle/NE8wavr9DnyGmo826
+  bottom_all_text: All Speakers
+  bottom_all_url: '#'
+sponsors_section:
+  label: Supporting Brands
+  title_html: Backed by the<br/>Best in Web3
+  description: We're proud to partner with the world's leading blockchain projects, exchanges, and institutions.
+  button_text: Become a Sponsor
+  button_url: https://forms.gle/NE8wavr9DnyGmo826
+  tiers_title: Sponsorship Tiers
+  tiers:
+  - name: Diamond
+    description: Platinum visibility + keynote slot
+    color_style: background:var(--gold);
+  - name: Gold
+    description: Stage branding + booth space
+    color_style: background:#C0C0C0;
+  - name: Silver
+    description: Logo placement + badge
+    color_style: background:#CD7F32;
+  - name: Media
+    description: Press pack + social coverage
+    color_style: background:var(--cyan);
+  tiers_note: Contact us for a custom package tailored to your goals.
+agenda_section:
+  enabled: false
+  label: Agenda
+  title_html: Conference<br/>Schedule
+  description: Edit agenda items from Decap CMS. Enable this section when the final schedule is ready.
+venue_section:
+  label: Event Info
+  title_html: Everything You Need<br/>to Know
+  description: Warsaw is ready for you. World-class infrastructure, iconic venue, and a city that never sleeps.
+cta:
+  label: Don't Miss Out
+  title_html: Be Part of <em>Web3's<br/>Biggest Moment</em> in Europe
+  subtitle: September 9–10, 2026 · Warsaw, Poland
+  primary_button_text: Get Tickets Now
+  primary_button_url: https://web3warsaw.com/tickets/
+  secondary_button_text: Become a Sponsor
+  secondary_button_url: https://forms.gle/NE8wavr9DnyGmo826
+footer:
+  logo_html: WEB3<span>.</span>WARSAW
+  description: The leading annual Web3 conference in Eastern Europe. Powered by Web3 Global Media.
+  socials:
+  - label: 𝕏
+    url: https://twitter.com/web3globalmedia
+  - label: in
+    url: https://www.linkedin.com/company/web3globalmedia/
+  columns:
+  - title: Navigation
+    links:
+    - label: Home
+      url: '#'
+      new_tab: false
+    - label: About
+      url: '#about'
+      new_tab: false
+    - label: Speakers
+      url: '#speakers'
+      new_tab: false
+    - label: Sponsors
+      url: '#sponsors'
+      new_tab: false
+    - label: Media
+      url: '#'
+      new_tab: false
+  - title: Participate
+    links:
+    - label: Get Tickets
+      url: '#tickets'
+      new_tab: false
+    - label: Apply as Speaker
+      url: https://forms.gle/NE8wavr9DnyGmo826
+      new_tab: true
+    - label: Become a Sponsor
+      url: https://forms.gle/NE8wavr9DnyGmo826
+      new_tab: true
+    - label: Side Events
+      url: '#'
+      new_tab: false
+    - label: Community
+      url: '#'
+      new_tab: false
+  - title: Event Info
+    links:
+    - label: Venue
+      url: '#venue'
+      new_tab: false
+    - label: Transport
+      url: '#venue'
+      new_tab: false
+    - label: Hotels
+      url: '#venue'
+      new_tab: false
+    - label: Contact Us
+      url: '#'
+      new_tab: false
+  event_date: SEPT 9–10, 2026
+  event_location: Warsaw, Poland
+  copyright: © 2026 Web3 Warsaw. All rights reserved.
+  brand: BY WEB3 GLOBAL MEDIA
